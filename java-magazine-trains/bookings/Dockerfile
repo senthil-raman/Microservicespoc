@@ -1,6 +1,5 @@
 FROM java:openjdk-8u45-jdk
 
-MAINTAINER tilen.faganel@me.com
 
 RUN apt-get update -qq && apt-get install -y wget git
 
