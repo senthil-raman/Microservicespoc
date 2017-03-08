@@ -6,8 +6,6 @@ WORKDIR /app
 
 ADD . /app
 
-RUN mvn clean package 
-
 ENV JAVA_ENV=PRODUCTION
 
 EXPOSE 8080
