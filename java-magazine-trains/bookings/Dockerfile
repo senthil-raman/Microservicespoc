@@ -4,8 +4,7 @@ MAINTAINER tilen.faganel@me.com
 
 RUN apt-get update -qq && apt-get install -y wget git
 
-RUN wget http://mirrors.sonic.net/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz && \
-       tar -zxf apache-maven-3.3.3-bin.tar.gz && rm apache-maven-3.3.3-bin.tar.gz && \
+RUN wget tar -zxf apache-maven-3.3.3-bin.tar.gz && rm apache-maven-3.3.3-bin.tar.gz && \
        mv apache-maven-3.3.3 /usr/local && ln -s /usr/local/apache-maven-3.3.3/bin/mvn /usr/bin/mvn
 
 RUN mkdir /app
