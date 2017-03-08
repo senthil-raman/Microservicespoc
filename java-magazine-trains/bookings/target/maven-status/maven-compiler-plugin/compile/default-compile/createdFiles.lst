@@ -1,0 +1,3 @@
+com\acme\trains\BookingApplication.class
+com\acme\trains\BookingsResource.class
+com\acme\trains\BookingService.class

@@ -1,7 +1,5 @@
 FROM java:openjdk-8u45-jdk
 
-MAINTAINER tilen.faganel@me.com
-
 RUN apt-get update -qq && apt-get install -y wget
 
 RUN wget http://mirrors.sonic.net/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz && \
