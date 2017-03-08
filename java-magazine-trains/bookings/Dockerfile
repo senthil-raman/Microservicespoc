@@ -6,7 +6,7 @@ WORKDIR /app
 
 ADD . /app
 
-RUN mvn clean package -Pdeploy
+RUN mvn clean package 
 
 ENV JAVA_ENV=PRODUCTION
 
