@@ -1,80 +1,23 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
 
-# Polls API
+# The Simplest API
+This is one of the simplest APIs written in the **API Blueprint**. One plain
+resource combined with a method and that's it! We will explain what is going on
+in the next installment - 
+[Resource and Actions](02.%20Resource%20and%20Actions.md).
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+**Note:** As we progress through the examples, do not also forget to view the
+[Raw](https://raw.github.com/apiaryio/api-blueprint/master/examples/01.%20Simplest%20API.md)
+code to see what is really going on in the API Blueprint, as opposed to just
+seeing the output of the Github Markdown parser.
 
-## Questions Collection [/questions]
+Also please keep in mind that every single example in this course is a **real
+API Blueprint** and as such you can **parse** it with the 
+[API Blueprint parser](https://github.com/apiaryio/drafter) or one of its
+[bindings](https://github.com/apiaryio/drafter#bindings).
 
-### List All Questions [GET]
 
-+ Response 200 (application/json)
+# GET /message
++ Response 200 (text/plain)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        Hello World!
